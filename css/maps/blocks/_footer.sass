@@ -1,0 +1,33 @@
+// 5. Footer
+.footer {
+    padding: 50px 90px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    &-copyright {
+        font-family: $nm-regular;
+        font-size: 16px;
+        line-height: 140%;
+        color: $main-color;
+        text-decoration: none;
+        transition: $transition;
+        text-align: right;
+        margin: 0; } }
+
+// 5.1 Footer - Button to top
+.top-arrow {
+    position: fixed;
+    z-index: 100;
+    left: 40px;
+    bottom: 0;
+    display: block;
+    width: 38px;
+    height: 38px;
+    transition: $transition;
+    transform: translate(0,0);
+    &:hover {
+        transform: translate(10px, -10px); } }

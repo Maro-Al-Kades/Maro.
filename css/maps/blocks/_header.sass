@@ -1,0 +1,153 @@
+/* 2. Header */
+.header {
+    padding: 20px;
+    padding: 45px 100px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 101;
+    transition: $transition;
+    .container-fluid {
+        padding: 0; }
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+    &-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; } }
+/* 2.1 Header - Logo */
+.header-logo {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    margin: auto;
+    span {
+        font-family: $nm-regular;
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: $main-color; } }
+/* 2.2 Header - Contacts */
+.header-contacts {
+    text-align: right;
+    &__link {
+        font-size: 20px;
+        line-height: 90%;
+        color: $main-color;
+        font-family: $sf-medium;
+        text-decoration: none;
+        transition: $transition;
+        display: none;
+        &:hover {
+            color: $mark-color; } }
+    &__copyright {
+        display: none; }
+    .social {
+        display: none;
+        &-list {
+            display: flex;
+            align-items: center; }
+        &-item {
+            margin-bottom: 0;
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0; } }
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center; } } }
+.header-phone {
+    display: block;
+    position: absolute;
+    right: 90px;
+    top: 45px; }
+/* 2.3 Header - Languages */
+.header-lang {
+    display: none;
+    align-items: center;
+    margin: 0 0 85px;
+    padding: 0;
+    list-style: none;
+    &__item {
+        margin-right: 13px;
+        &:last-child {
+            margin-right: 0; }
+        &.active {
+            .header-lang__link {
+                color: $mark-color; } } }
+    &__link {
+        font-size: 13px;
+        line-height: 150%;
+        color: $main-color;
+        &:hover, &:focus, &:active {
+            color: $mark-color; } } }
+/* 2.4 Header - Burger */
+.header-burger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    &-inner {
+        width: 30px;
+        height: 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column; }
+    &-line {
+        display: block;
+        background: $main-color;
+        width: 30px;
+        height: 3px;
+        transition: $transition;
+        margin: 5px 0; }
+    &.clicked {
+        .header-burger-line {
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(10px); }
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(7px) translateX(5px); }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-7px) translateX(5px); } } } }
+
+.inner-page {
+    .header {
+        &.fixed {
+            background: $dark-color; } } }
+/* 2.5 Header - Navbar */
+.nav {
+    &-list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none; }
+    &-item {
+        margin-right: 42px;
+        &:last-child {
+            margin-right: 0; }
+        &.active {
+            .nav-link {
+                color: $mark-color; } } }
+    &-link {
+        display: inline-block;
+        font-family: $nm-medium;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $main-color;
+        text-decoration: none;
+        position: relative;
+        transition: $transition;
+        &:hover {
+            color: $mark-color; } } }
